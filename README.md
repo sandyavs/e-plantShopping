@@ -23,6 +23,12 @@ By completing this project, I was able to:
   - Continue Shopping and Checkout buttons for seamless user flow
   - Real-time updates to the cart quantity icon in the navbar and total cost calculations as users interact with the cart
  
+## Deployment
+The application is deployed using GitHub Pages, providing a simple and reliable way to host static sites. Here's the link to the application: https://sandyavs.github.io/e-plantShopping/
+
+## Tech Stack
+This project is built using React 18 with Vite for fast development and optimized builds. The application is structured using functional components, React Hooks (useState, useEffect), and Redux Toolkit for global state management.
+
 ## Result
 
 ### Landing Page
@@ -49,10 +55,3 @@ When clicked, it takes to the product list page where additional items can be ad
 When the Checkout button is clicked, the app will guide users to review their selected products before proceeding to payment. Once confirmed, the user will be directed to the payment section. This feature is planned for integration at a later stage. To handle payments securely and efficiently, Stripe should be used as the payment gateway as it is widely trusted, developer-friendly, and provides built-in security.
 
 <img width="1221" height="377" alt="Screenshot 2025-07-28 at 1 05 37 AM" src="https://github.com/user-attachments/assets/82127b07-3fe3-41e1-a9b8-f8063f95001a" />
-
-
-## Tech Stack
-This project is built using React 18 with Vite for fast development and optimized builds. The application is structured using functional components, React Hooks (useState, useEffect), and Redux Toolkit for global state management.
-
-## Deployment
-The application is deployed using GitHub Pages, providing a simple and reliable way to host static sites. Here's the link to the application: https://sandyavs.github.io/e-plantShopping/
