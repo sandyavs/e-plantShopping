@@ -8,6 +8,7 @@ export const CartSlice = createSlice({
 	reducers: {
 		//plant: name, img, descr, cost
 		addItem: (state, action) => {
+			console.log('addItem', action.payload)
 			//Destructure action payload
 			const {name, image, cost} = action.payload;
 			const existingItem = state.items.find(item => item.name === name);
