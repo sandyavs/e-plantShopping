@@ -1,7 +1,7 @@
 # Paradise Nursery Shopping Application
 
 ## Description
-This is an online store application offering a variety of beautiful and beneficial houseplants. The application showcases a dynamic and interactive shopping experience where users can explore plant categories, view product details, and manage their cart efficiently. The application built using Vite and React 18. The goal of the application is to provide users with a seamless and enjoyable online shopping experience for houseplants.
+This is an online store application offering a variety of beautiful and beneficial houseplants. The application showcases a dynamic and interactive shopping experience where users can explore plant categories, view product details, and manage their cart efficiently. The application built using **Vite** and **React 18**. The goal of the application is to provide users with a seamless and enjoyable online shopping experience for houseplants.
 
 ## Learning Objectives
 By completing this project, I was able to:
