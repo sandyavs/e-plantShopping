@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import './ProductList.css'
 import CartItem from './CartItem';
 import { addItem } from './CartSlice';
@@ -8,6 +9,8 @@ function ProductList({ onHomeClick }) {
 	// State to control the visibility of the About Us page
 	const [showPlants, setShowPlants] = useState(false);
 	const [addedToCart, setAddedToCart] = useState({});
+	const dispatch = useDispatch();
+
 
 	const plantsArray = [
 		{
@@ -243,11 +246,12 @@ function ProductList({ onHomeClick }) {
 	};
 
 	const handleAddToCart = (product) => {
+		console.log('handleAddToCart')
+		dispatch(addItem(product));
 		setAddedToCart((prevState) => ({
 			...prevState, //using spread operator to retain existing entries
 			[product.name]: true  // Set the current product's name (key) with value: 'true' to mark it as added
 		}));
-		dispatch(addItem(product));
 	};
 
 	const handleCartClick = (e) => {
@@ -286,7 +290,7 @@ function ProductList({ onHomeClick }) {
 			</div>
 			{!showCart ? (
 				<div className="product-grid">
-					{plantsArray.map((category, index) => {
+					{plantsArray.map((category, index) => (
 						<div key={index}>
 							<h1>
 								<div>{category.category}</div>
@@ -294,7 +298,7 @@ function ProductList({ onHomeClick }) {
 							{/* Container for the list of plant cards */}
 							<div className='product-list'>
 								{/* mapping each plant in the category */}
-								{category.plants.map((plant, plantIndex) => {
+								{category.plants.map((plant, plantIndex) => (
 									<div className='product-card' key={plantIndex}>
 										<img
 											className="product-image"
@@ -312,10 +316,10 @@ function ProductList({ onHomeClick }) {
 											Add to Cart
 										</button>
 									</div>
-								})};
+								))};
 							</div>
 						</div>
-					})};
+					))};
 				</div>
 			) : (
 				<CartItem onContinueShopping={handleContinueShopping} />
